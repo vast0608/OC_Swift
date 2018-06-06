@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "OC_Swift-Swift.h"
 @interface ViewController ()
 
 @end
@@ -16,14 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    /*
+    SwiftClass *sClass = [[SwiftClass alloc]init];
+    sClass.str = @"llll";
+    NSString *string =  [sClass testFunc];
+    NSLog(@"%@",string);
+     */
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)toViewController:(UIButton *)sender {
+    SwiftClass *sClass = [[SwiftClass alloc]init];
+    [sClass presentViewConrollerFuncWithCurrentVC:self parameters:@{@"str":@"Swift页面"}];
 }
-
 
 @end
